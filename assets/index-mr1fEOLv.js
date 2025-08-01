@@ -1,4 +1,4 @@
-import{j as e}from"./index-CXDlUxEh.js";import{A as l}from"./index-DUktqedL.js";const s=({addStyles:t=""})=>e.jsxs("div",{className:`${t} flex justify-between gap-x-5 bg-white
+import{j as e}from"./index-CKU4jFT5.js";import{A as l}from"./index-CbkXxOz8.js";const s=({addStyles:t=""})=>e.jsxs("div",{className:`${t} flex justify-between gap-x-5 bg-white
         border border-[#eee] rounded-2xl max-w-[440px] h-[60px] py-2 pl-4 pr-2
         focus-within:shadow-[0_0_0_2px_#583fbc] duration-300`,children:[e.jsx("input",{type:"search",placeholder:"Search article or news...",className:`w-full text-base font-medium text-violet-dark\r
           placeholder-text-violet-dark/60 outline-none`}),e.jsxs("button",{className:`bg-violet rounded-xl text-sm text-white flex py-2 px-3\r
