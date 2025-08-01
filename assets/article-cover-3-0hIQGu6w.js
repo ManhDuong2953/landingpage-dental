@@ -1,0 +1,1 @@
+const e="/landingpage-dental/assets/article-cover-1-BR4d2n_l.png",a="/landingpage-dental/assets/article-cover-2-BIHTHWIx.png",n="/landingpage-dental/assets/article-cover-3-D34r76Er.png";export{e as A,a,n as b};
