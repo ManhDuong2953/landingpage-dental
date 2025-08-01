@@ -5,10 +5,10 @@ type NavLinkItemsProps = {
 };
 
 const navItemsList = [
-  { link: "/dental-landing-page/about", name: "About Us" },
-  { link: "/dental-landing-page/blog", name: "New Patient" },
-  { link: "/dental-landing-page/services", name: "Our Services" },
-  { link: "/dental-landing-page/contact", name: "Contact Us" },
+  { link: "/landingpage-dental/about", name: "About Us" },
+  { link: "/landingpage-dental/blog", name: "New Patient" },
+  { link: "/landingpage-dental/services", name: "Our Services" },
+  { link: "/landingpage-dental/contact", name: "Contact Us" },
 ];
 
 const NavLinkItems = ({ hideMobileMenu }: NavLinkItemsProps) => {

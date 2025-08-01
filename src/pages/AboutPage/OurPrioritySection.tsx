@@ -1,18 +1,17 @@
 import DoctorAndNursePerformingAPatientImg from "../../assets/images/AboutPage/doctor-and-nurse-performing-a-dental-procedure-on-a-patient.png";
-import VioletButton from "../../components/ui/VioletButton";
+import VioletButton from "../../components/UI/VioletButton";
 
 const OurPrioritySection = () => {
   return (
     <section
-      className="section-1200 justify-center 
-      tablet:justify-between items-center gap-x-16"
+      className="justify-center tablet:justify-between items-center gap-x-16 section-1200"
     >
       {/* left content */}
-      <div className="max-w-[550px] hidden tablet:block">
+      <div className="hidden tablet:block max-w-[550px]">
         <img
           src={DoctorAndNursePerformingAPatientImg}
           alt="Doctor and nurse performing a dental procedure on a patient"
-          className="min-w-60 w-full h-auto object-cover"
+          className="w-full min-w-60 h-auto object-cover"
         />
       </div>
 
@@ -20,27 +19,27 @@ const OurPrioritySection = () => {
       <div className="flex flex-col">
         <span className="section-small-title">Our priority</span>
 
-        <h2 className="tablet:max-w-[395px] mt-4 mb-6">
+        <h2 className="mt-4 mb-6 tablet:max-w-[395px]">
           Our clients are our priority
         </h2>
 
         {/* image display on tablet and mobile screens */}
-        <div className="max-w-[550px] mt-8 mb-14 tablet:hidden">
+        <div className="tablet:hidden mt-8 mb-14 max-w-[550px]">
           <img
             src={DoctorAndNursePerformingAPatientImg}
             alt="Doctor and nurse performing a dental procedure on a patient"
-            className="min-w-60 w-full h-auto object-cover"
+            className="w-full min-w-60 h-auto object-cover"
           />
         </div>
 
-        <p className="max-w-[510px] mx-auto tablet:mx-0 mb-14">
+        <p className="mx-auto tablet:mx-0 mb-14 max-w-[510px]">
           Lorem ipsum is placeholder text commonly used in the graphic, print,
           and publishing industries for previewing layouts and visual mockups.
         </p>
 
         <VioletButton
           isLink={true}
-          link="/dental-landing-page#book-appointment"
+          link="/landingpage-dental#book-appointment"
           addStyles="text-center rounded-2xl after:rounded-2xl px-6 py-4
           mobileM:px-10 mobileM:py-5 self-center tablet:self-start"
         >

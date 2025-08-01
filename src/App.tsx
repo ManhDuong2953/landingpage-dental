@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 
-import Footer from "./components/Footer";
+
+import LoadingPage from "./components/UI/LoadingPage";
 import Header from "./components/Header";
 import Layout from "./pages/Layout";
 import Routing from "./routes";
-import LoadingPage from "./components/ui/LoadingPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import InputForm from "../Form/InputForm";
 import SelectForm from "../Form/SelectForm";
-import VioletButton from "../ui/VioletButton";
+import VioletButton from "../UI/VioletButton";
 import PhoneVioletIcon from "../../assets/images/HomePage/contact-phone-violet.svg";
 
 type BookAppointmentData = {
@@ -52,7 +52,7 @@ const FormBookAppointment = ({
         {/* form elements to enter text */}
         <div>
           {/* name, email, services and department */}
-          <div className="grid grid-cols-1 mobileL:grid-cols-2 gap-x-10 gap-y-8">
+          <div className="gap-x-10 gap-y-8 grid grid-cols-1 mobileL:grid-cols-2">
             <InputForm
               id="form-book-appointment-name"
               name="name"
@@ -103,10 +103,10 @@ const FormBookAppointment = ({
           </div>
 
           {/* message */}
-          <div className="mt-8 flex flex-col gap-y-3">
+          <div className="flex flex-col gap-y-3 mt-8">
             <label
               htmlFor="form-book-appointment-message"
-              className="text-sm leading-5 font-bold tracking-[8%] uppercase"
+              className="font-bold text-sm uppercase leading-5 tracking-[8%]"
             >
               Message
             </label>
@@ -119,25 +119,21 @@ const FormBookAppointment = ({
               value={appointmentData.message}
               required
               onChange={handleChange}
-              className="min-h-48 text-base font-medium px-4 py-3 rounded-2xl
-              border border-[#eee] text-violet-dark outline-none resize-none
-              focus:shadow-[0_0_0_2px_#583fbc] focus:border-transparent 
-              placeholder-primary duration-200"
+              className="focus:shadow-[0_0_0_2px_#583fbc] px-4 py-3 border border-[#eee] focus:border-transparent rounded-2xl outline-none min-h-48 font-medium text-violet-dark text-base duration-200 resize-none placeholder-primary"
             ></textarea>
           </div>
         </div>
 
         {/* contact and btn to book appointment (submit) */}
         <div
-          className="flex flex-col items-center mobileL:flex-row justify-between
-          gap-8 flex-wrap tabletL:justify-between"
+          className="flex mobileL:flex-row flex-col flex-wrap justify-between tabletL:justify-between items-center gap-8"
         >
           {/* contact */}
           <div className="flex items-center gap-x-4">
             <img src={PhoneVioletIcon} alt="" className="max-w-[64px]" />
             <div className="flex flex-col whitespace-nowrap">
               <span className="section-small-title">Dental 24H Emergency</span>
-              <span className="text-violet-dark font-bold">03 482 394 123</span>
+              <span className="font-bold text-violet-dark">03 482 394 123</span>
             </div>
           </div>
 

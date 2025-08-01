@@ -1,27 +1,26 @@
-import VioletButton from "../../components/ui/VioletButton";
+import VioletButton from "../../components/UI/VioletButton";
 import DentistAndHisSmilingPatientImg from "../../assets/images/AboutPage/dentist-and-his-smiling-patient.png";
 
 const HeroSection = () => {
   return (
     <section
-      className="mt-10 max-w-[1200px] w-full mx-auto flex justify-center
-      tablet:justify-between items-center gap-x-24"
+      className="flex justify-center tablet:justify-between items-center gap-x-24 mx-auto mt-10 w-full max-w-[1200px]"
     >
       {/* left content */}
       <div className="flex flex-col">
         <h1 className="whitespace-nowrap">About Us</h1>
 
         {/* hero image - display on tablet and mobile screens */}
-        <div className="max-w-[620px] mt-12 mb-5 tablet:hidden">
+        <div className="tablet:hidden mt-12 mb-5 max-w-[620px]">
           <img
             src={DentistAndHisSmilingPatientImg}
             alt="A dentist and his smiling patient"
-            className="min-w-60 w-[full] h-auto object-cover"
+            className="w-[full] min-w-60 h-auto object-cover"
           />
         </div>
 
         <p
-          className="max-w-[550px] mx-auto tablet:mx-0 mt-8 mb-12 tablet:mb-16"
+          className="mx-auto tablet:mx-0 mt-8 mb-12 tablet:mb-16 max-w-[550px]"
         >
           We want you to feel amazing about your oral wellness. Not just twice a
           year, but every time you take a bite, tell a joke, laugh, or share a
@@ -38,11 +37,11 @@ const HeroSection = () => {
       </div>
 
       {/* right content - hero image */}
-      <div className="max-w-[620px] hidden tablet:block">
+      <div className="hidden tablet:block max-w-[620px]">
         <img
           src={DentistAndHisSmilingPatientImg}
           alt="A dentist and his smiling patient"
-          className="min-w-60 w-[full] h-auto object-cover"
+          className="w-[full] min-w-60 h-auto object-cover"
         />
       </div>
     </section>

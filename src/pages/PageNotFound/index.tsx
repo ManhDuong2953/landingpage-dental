@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 const PageNotFound = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    setTimeout(() => navigate("/dental-landing-page"), 2000);
+    setTimeout(() => navigate("/landingpage-dental"), 2000);
   }, [navigate]);
 
   return (
-    <div className="mt-8 flex flex-col items-center">
+    <div className="flex flex-col items-center mt-8">
       <svg
-        className="w-10 h-10 mb-3 text-violet fill-current"
+        className="fill-current mb-3 w-10 h-10 text-violet"
         viewBox="0 0 24 24"
       >
         <path
@@ -19,7 +19,7 @@ const PageNotFound = () => {
           clipRule="evenodd"
         />
       </svg>
-      <p className="text-violet-dark/50 font-semibold">Oups, page not found...</p>
+      <p className="font-semibold text-violet-dark/50">Oups, page not found...</p>
     </div>
   );
 };

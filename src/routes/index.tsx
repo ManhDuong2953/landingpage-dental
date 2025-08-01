@@ -12,22 +12,22 @@ const PageNotFound = React.lazy(() => import("../pages/PageNotFound"));
 const Routing = () => {
   const routes = useRoutes([
     { path: "/", element: <HomePage /> },
-    { path: "/dental-landing-page", element: <HomePage /> },
+    { path: "/landingpage-dental", element: <HomePage /> },
 
     { path: "/about", element: <AboutPage /> },
-    { path: "/dental-landing-page/about", element: <AboutPage /> },
+    { path: "/landingpage-dental/about", element: <AboutPage /> },
 
     { path: "/services", element: <ServicesPage /> },
-    { path: "/dental-landing-page/services", element: <ServicesPage /> },
+    { path: "/landingpage-dental/services", element: <ServicesPage /> },
 
     { path: "/blog", element: <BlogPage /> },
-    { path: "/dental-landing-page/blog", element: <BlogPage /> },
+    { path: "/landingpage-dental/blog", element: <BlogPage /> },
 
     { path: "/blog/:id", element: <BlogPost /> },
-    { path: "/dental-landing-page/blog/:id", element: <BlogPost /> },
+    { path: "/landingpage-dental/blog/:id", element: <BlogPost /> },
 
     { path: "/contact", element: <ContactPage /> },
-    { path: "/dental-landing-page/contact", element: <ContactPage /> },
+    { path: "/landingpage-dental/contact", element: <ContactPage /> },
 
     { path: "/*", element: <PageNotFound /> },
   ]);

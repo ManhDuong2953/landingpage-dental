@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { CgClose } from "react-icons/cg";
 import NavLinkItems from "./NavLinkItems";
-import VioletButton from "../ui/VioletButton";
+import VioletButton from "../UI/VioletButton";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -33,8 +33,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       {/* btn to close */}
       <button
         onClick={onClose}
-        className="absolute right-3 top-2 bg-[#f4f4f4] rounded-full p-[6px] hover:bg-violet-dark
-        hover:text-white active:shadow-[#6523d766_0px_-50px_36px_-28px_inset] duration-300"
+        className="top-2 right-3 absolute bg-[#f4f4f4] hover:bg-violet-dark active:shadow-[#6523d766_0px_-50px_36px_-28px_inset] p-[6px] rounded-full hover:text-white duration-300"
       >
         <CgClose size={28} />
       </button>
@@ -45,7 +44,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       {/* btn to Book an appointment */}
       <VioletButton
         isLink={true}
-        link="/dental-landing-page#book-appointment"
+        link="/landingpage-dental#book-appointment"
         onClick={onClose}
         addStyles="mt-4 text-sm laptop:text-base px-6 py-4 rounded-xl 
         after:rounded-xl"

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 
 import DentalistLogo from "../../assets/svg/dentalist.svg";
-import VioletButton from "../ui/VioletButton";
+import VioletButton from "../UI/VioletButton";
 import NavLinkItems from "./NavLinkItems";
 import MobileMenu from "./MobileMenu";
 
@@ -38,12 +38,11 @@ const Header = () => {
         }
       >
         <nav
-          className="max-w-screen-laptopM w-full mx-auto min-h-12 flex
-          items-center justify-between gap-x-6 whitespace-nowrap"
+          className="flex justify-between items-center gap-x-6 mx-auto w-full max-w-screen-laptopM min-h-12 whitespace-nowrap"
         >
           {/* site logo */}
           <Link
-            to="/dental-landing-page"
+            to="/landingpage-dental"
             className="hover:opacity-70 active:scale-[.98] duration-300"
           >
             <img
@@ -55,9 +54,7 @@ const Header = () => {
 
           {/* nav-links */}
           <menu
-            className="hidden tablet:flex items-center justify-center
-            text-violet-dark font-bold text-base laptop:text-lg
-            gap-x-5 laptop:gap-x-7 laptopM:gap-x-10"
+            className="hidden tablet:flex justify-center items-center gap-x-5 laptop:gap-x-7 laptopM:gap-x-10 font-bold text-violet-dark text-base laptop:text-lg"
           >
             <NavLinkItems />
           </menu>
@@ -65,7 +62,7 @@ const Header = () => {
           {/* Book an appointment Button */}
           <VioletButton
             isLink={true}
-            link="/dental-landing-page#book-appointment"
+            link="/landingpage-dental#book-appointment"
             addStyles="hidden laptopM:block text-sm laptop:text-base
             px-6 py-4 rounded-xl after:rounded-xl mr-5"
           >
@@ -75,11 +72,7 @@ const Header = () => {
           {/* btn show mobile menu */}
           <button
             onClick={openMobileMenu}
-            className="bg-violet text-white rounded-xl text-xl px-[10px] py-2 
-            mobileM:px-3 mobileM:text-2xl tablet:text-xl laptop:text-3xl laptopM:hidden
-            hover:bg-white hover:shadow-[0_0_0_2.5px_#583fbc] hover:text-violet 
-            active:shadow-[0_0_0_2.5px_#583fbc,#6523d766_0px_-50px_36px_-28px_inset] 
-            duration-300"
+            className="laptopM:hidden bg-violet hover:bg-white hover:shadow-[0_0_0_2.5px_#583fbc] active:shadow-[0_0_0_2.5px_#583fbc,#6523d766_0px_-50px_36px_-28px_inset] px-[10px] mobileM:px-3 py-2 rounded-xl text-white hover:text-violet text-xl tablet:text-xl mobileM:text-2xl laptop:text-3xl duration-300"
           >
             <CgMenuRight />
           </button>
