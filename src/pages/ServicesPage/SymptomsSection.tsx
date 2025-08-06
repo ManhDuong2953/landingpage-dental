@@ -7,59 +7,60 @@ import ExtremeSensitivityIcon from "../../assets/images/ServicesPage/extreme-sen
 const symptoms = [
   {
     img: SontaneousPainIcon,
-    title: "Spontaneous pain",
-    desc: "Spontaneous pain even when you’re not eating or drinking.",
+    title: "Đau tự phát",
+    desc: "Đau răng xuất hiện bất chợt ngay cả khi bạn không ăn uống gì.",
   },
   {
     img: DiscolorationOfToothIcon,
-    title: "Discoloration of tooth",
-    desc: "Darkening or discoloration of a tooth.",
+    title: "Răng đổi màu",
+    desc: "Răng trở nên tối màu hoặc bị đổi màu bất thường.",
   },
   {
     img: MiddleNightPainIcon,
-    title: "Middle night pain",
-    desc: "Pain that wakes you up in the middle of the night.",
+    title: "Đau giữa đêm",
+    desc: "Cơn đau nghiêm trọng đến mức khiến bạn tỉnh giấc vào ban đêm.",
   },
   {
     img: TendernessInGumsIcon,
-    title: "Tenderness in gums",
-    desc: "From floss bosses to sweet tooths, every mouth is welcome.",
+    title: "Nướu sưng hoặc nhạy cảm",
+    desc: "Cảm giác đau hoặc sưng ở vùng nướu xung quanh răng bị tổn thương.",
   },
   {
     img: ExtremeSensitivityIcon,
-    title: "Extreme sensitivity",
-    desc: "Extreme sensitivity to cold or heat when your’e drink or eat.",
+    title: "Nhạy cảm quá mức",
+    desc: "Cảm giác buốt dữ dội khi ăn đồ nóng hoặc lạnh.",
   },
 ];
 
 const SymptomsSection = () => {
+
   return (
     <section
-      className="bg-orange-light rounded-[48px] pt-20 px-24 pb-16
-      flex flex-col items-center gap-y-14"
+      className="flex flex-col items-center gap-y-14 bg-orange-light px-6 laptop:px-24 tabletM:px-12 pt-20 pb-16 rounded-[48px]"
+      data-aos="fade-up"
     >
-      {/* top content */}
-      <div className="flex flex-col items-center text-center">
-        <span className="section-small-title">Symptoms</span>
-        <h2 className="mt-4 mb-6">Sign and symptoms you need root canal</h2>
-        <p className="max-w-[848px]">
-          Lorem ipsum is placeholder text commonly used in the graphic, print,
-          and publishing industries for previewing layouts and visual mockups.
+      {/* Phần trên - tiêu đề */}
+      <div className="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <span className="section-small-title">Triệu chứng</span>
+        <h2 className="mt-4 mb-6">Dấu hiệu bạn có thể cần điều trị tủy</h2>
+        <p className="max-w-[848px] text-violet-dark/70">
+          Nếu bạn đang gặp phải một trong những triệu chứng dưới đây, rất có thể tủy răng của bạn đã bị tổn thương và cần được điều trị kịp thời. Việc phát hiện sớm sẽ giúp bảo tồn răng thật và giảm đau hiệu quả.
         </p>
       </div>
 
-      {/* bottom content */}
-      <div className="grid grid-cols-1 tabletL:grid-cols-2 gap-12">
-        {symptoms.map(({ img, title, desc }) => (
+      {/* Phần dưới - danh sách triệu chứng */}
+      <div className="gap-12 grid grid-cols-1 tabletL:grid-cols-2" data-aos="fade-up" data-aos-delay="200">
+        {symptoms.map(({ img, title, desc }, idx) => (
           <div
             key={title}
-            className="flex flex-col items-center text-center gap-6
-            mobileXL:flex-row mobileXL:text-left"
+            className="flex mobileXL:flex-row flex-col items-center gap-6 mobileXL:text-left text-center"
+            data-aos="fade-up"
+            data-aos-delay={300 + idx * 100}
           >
             <img src={img} alt={title} className="w-24 h-auto object-cover" />
 
             <div className="flex flex-col gap-y-2">
-              <h3>{title}</h3>
+              <h3 className="font-semibold text-lg">{title}</h3>
               <p className="tabletL:w-72 text-violet-dark/60">{desc}</p>
             </div>
           </div>

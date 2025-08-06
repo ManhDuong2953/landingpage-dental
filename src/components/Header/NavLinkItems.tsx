@@ -5,10 +5,10 @@ type NavLinkItemsProps = {
 };
 
 const navItemsList = [
-  { link: "/landingpage-dental/about", name: "About Us" },
-  { link: "/landingpage-dental/blog", name: "New Patient" },
-  { link: "/landingpage-dental/services", name: "Our Services" },
-  { link: "/landingpage-dental/contact", name: "Contact Us" },
+  { link: "/landingpage-dental/about", name: "Về chúng tôi" },
+  { link: "/landingpage-dental/blog", name: "Khách hàng" },
+  { link: "/landingpage-dental/services", name: "Dịch vụ" },
+  { link: "/landingpage-dental/contact", name: "Liên hệ với chúng tôi" },
 ];
 
 const NavLinkItems = ({ hideMobileMenu }: NavLinkItemsProps) => {

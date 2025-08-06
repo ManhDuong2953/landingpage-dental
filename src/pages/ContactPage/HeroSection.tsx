@@ -3,23 +3,29 @@ import FormBookAppointment from "../../components/FormBookAppointment";
 const HeroSection = () => {
   return (
     <section
-      className="mobileM:px-5 bg-sky-light pt-16 rounded-[48px] flex flex-col
-      items-center text-center mobileM:pb-5 tablet:pb-0 tablet:mb-[420px]"
+      className="flex flex-col items-center bg-sky-light tablet:mb-[420px] mobileM:px-5 pt-16 mobileM:pb-5 tablet:pb-0 rounded-[48px] text-center"
     >
-      {/* top content */}
-      <h1 className="whitespace-nowrap">Contact Us</h1>
-      <p className="mt-8 mb-16 max-w-[550px] text-lg font-medium">
-        Lorem ipsum is placeholder text commonly used in the graphic, print, and
-        publishing industries for previewing layouts and visual mockups.
+      {/* Tiêu đề và mô tả */}
+      <h1 className="whitespace-nowrap" data-aos="fade-up">
+        Liên hệ với chúng tôi
+      </h1>
+      <p
+        className="mt-8 mb-16 max-w-[550px] font-medium text-lg"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Hãy để lại thông tin của bạn, chúng tôi sẽ liên hệ sớm nhất để hỗ trợ đặt lịch hoặc tư vấn về dịch vụ.
       </p>
 
-      {/* bottom content - form to book an appointment */}
+      {/* Form đặt lịch hẹn */}
       <FormBookAppointment
         addStylesToForm="bg-white pt-10 pb-8 px-4 mobileM:px-6 mobileXL:px-10 tablet:px-16 
         tabletL:pt-14 tabletL:pb-12 tabletL:px-24 rounded-[2rem] tablet:rounded-[3rem]
         text-left tablet:shadow-md tablet:-mb-[420px]
         w-full tablet:w-auto
-        -mb-[2px] mobileM:mb-0" 
+        -mb-[2px] mobileM:mb-0"
+        data-aos="fade-up"
+        data-aos-delay="200"
       />
     </section>
   );

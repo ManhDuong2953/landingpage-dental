@@ -6,44 +6,55 @@ import ArticleCard from "../../components/ArticleCard";
 const articleList = [
   {
     cover: ArticleCoverImg1,
-    category: "Technology",
-    title: "New Technology Make for Dental Operation",
+    category: "Công nghệ",
+    title: "Công nghệ mới phục vụ cho phẫu thuật nha khoa",
   },
   {
     cover: ArticleCoverImg2,
-    category: "Dental",
-    title: "Regular Dental care make Your Smile Brighter",
+    category: "Nha khoa",
+    title: "Chăm sóc răng miệng thường xuyên giúp nụ cười sáng hơn",
   },
   {
     cover: ArticleCoverImg3,
-    category: "Hygiene",
-    title: "Dental Hygiene for All Age to Make Smile",
+    category: "Vệ sinh",
+    title: "Vệ sinh răng miệng cho mọi lứa tuổi để có nụ cười đẹp",
   },
 ];
 
 const BlogSection = () => {
   return (
     <section
-      className="section-1200 flex-col items-center gap-y-16"
+      className="flex-col items-center gap-y-16 section-1200"
+      data-aos="fade-up"
+      data-aos-duration="800"
     >
-      <div className="flex flex-col gap-y-4 items-center text-center">
+      {/* Tiêu đề phần blog */}
+      <div
+        className="flex flex-col items-center gap-y-4 text-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         <span className="section-small-title">Blog</span>
-        <h2>Stay updated with our latest news</h2>
+        <h2>Cập nhật những tin tức mới nhất từ chúng tôi</h2>
       </div>
 
-      {/* some articles */}
-      <div
-        className="flex flex-col items-stretch justify-center gap-10
-        tabletL:flex-row"
-      >
-        {articleList.map(({ cover, category, title }) => (
-          <ArticleCard
+      {/* Hiển thị danh sách bài viết */}
+      <div className="flex tabletL:flex-row flex-col justify-center items-stretch gap-10">
+        {articleList.map(({ cover, category, title }, index) => (
+          <div
             key={title}
-            cover={cover}
-            title={title}
-            category={category}
-            abstract="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing..."
-          />
+            data-aos="fade-up"
+            data-aos-delay={200 + index * 200}
+            data-aos-duration="1000"
+          >
+            <ArticleCard
+              cover={cover}
+              title={title}
+              category={category}
+              abstract="Lorem ipsum là đoạn văn bản mẫu thường dùng trong thiết kế đồ họa, in ấn và xuất bản..."
+            />
+          </div>
         ))}
       </div>
     </section>

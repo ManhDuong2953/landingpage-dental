@@ -4,40 +4,37 @@ import NewsAndArticleImg from "../../assets/images/BlogPage/news-and-article-img
 const HeroSection = () => {
   return (
     <section
-      className="mt-6 max-w-[1200px] w-full mx-auto flex justify-center
-      items-center gap-x-16"
+      className="flex tablet:flex-row flex-col-reverse justify-center items-center gap-x-16 gap-y-10 mx-auto mt-6 px-4 w-full max-w-[1200px]"
     >
-      {/* left content */}
-      <div className="flex flex-col">
-        <h1 className="-order-2">News & articles</h1>
+      {/* Left Content */}
+      <div
+        className="flex flex-col items-center tablet:items-start tablet:text-left text-center"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
+        <h1 className="font-bold text-[32px] text-violet-dark tablet:text-[44px] leading-tight">
+          Tin tức & Bài viết
+        </h1>
 
-        {/* hero image - display on tablet and mobile screens */}
-        <div className="max-w-[620px] mb-10 tablet:hidden">
-          <img
-            src={NewsAndArticleImg}
-            alt="News and article about dentition"
-            className="min-w-60 w-full h-auto object-cover"
-          />
-        </div>
-
-        <p className="max-w-[480px] mx-auto mt-8 tablet:mx-0 tablet:mb-16">
-          Stays updated with our latest blog and news and get healthy tips &
-          trick for oral health.
+        <p className="mt-4 mb-8 max-w-[480px] text-gray-700">
+          Cập nhật những thông tin, mẹo chăm sóc sức khỏe răng miệng và tin tức
+          mới nhất từ chúng tôi mỗi ngày.
         </p>
 
         {/* SearchBar */}
-        <SearchBar
-          addStyles="-order-1 tablet:self-stretch tablet:order-1
-          mt-8 mb-10 tablet:mb-0"
-        />
+        <SearchBar addStyles="w-full max-w-[480px]" />
       </div>
 
-      {/* right content - hero image */}
-      <div className="max-w-[620px] hidden tablet:block">
+      {/* Right Content - Hero Image */}
+      <div
+        className="w-full max-w-[600px]"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
         <img
           src={NewsAndArticleImg}
           alt="News and article about dentition"
-          className="min-w-60 w-full h-auto object-cover"
+          className="shadow-sm rounded-xl w-full h-auto object-cover"
         />
       </div>
     </section>

@@ -8,40 +8,50 @@ const SafetySection = () => {
   const [isPaused, setIsPaused] = useState(true);
 
   const togglePlayPause = () => {
-    videoRef.current?.paused
-      ? videoRef.current?.play()
-      : videoRef.current?.pause();
-
-    videoRef.current && setIsPaused(videoRef.current.paused);
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+      setIsPaused(videoRef.current.paused);
+    }
   };
 
   return (
     <section
-      className="max-w-[1200px] mx-auto w-full bg-violet-light rounded-[48px]
-      pt-20 px-4 flex flex-col items-center gap-y-12 tablet:gap-y-24
-      tablet:mb-48 pb-4 tablet:pb-0"
+      className="flex flex-col items-center gap-y-12 tablet:gap-y-24 bg-violet-light mx-auto tablet:mb-48 px-4 pt-20 pb-4 tablet:pb-0 rounded-[48px] w-full max-w-[1200px]"
     >
-      {/* top content */}
-      <div className="text-center">
-        <span className="section-small-title">Safety</span>
-        <h2 className="mt-4 mb-6">We put the safety first</h2>
-        <p className="max-w-[510px]">
-          Lorem ipsum is placeholder text commonly used in the graphic, print,
-          and publishing industries for previewing layouts and visual mockups.
+      {/* Top content */}
+      <div className="text-center" data-aos="fade-up">
+        <span className="section-small-title">An toàn</span>
+        <h2 className="mt-4 mb-6">Chúng tôi đặt yếu tố an toàn lên hàng đầu</h2>
+        <p className="mx-auto max-w-[510px]">
+          Từ trang thiết bị hiện đại đến quy trình vô trùng nghiêm ngặt,
+          chúng tôi luôn đảm bảo sự an toàn tuyệt đối cho mọi khách hàng khi trải nghiệm dịch vụ.
         </p>
       </div>
 
-      {/* bottom content */}
-      <div className="max-w-[840px] tablet:-mb-48 rounded-[2.5rem] overflow-hidden relative">
-        {isPaused ? (
-          //  pause button
-          <button
-            onClick={togglePlayPause}
-            className="w-20 h-20 rounded-full
-            absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-            bg-white flex items-center justify-center text-violet-dark
-            active:bg-violet active:text-white duration-200 z-[2]"
-          >
+      {/* Video content */}
+      <div
+        className="relative tablet:-mb-48 rounded-[2.5rem] max-w-[840px] overflow-hidden"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        {/* Play/Pause button */}
+        <button
+          onClick={togglePlayPause}
+          aria-label={isPaused ? "Phát video" : "Tạm dừng video"}
+          className={`w-20 h-20 rounded-full absolute top-1/2 left-1/2 
+            -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-[2]
+            ${
+              isPaused
+                ? "bg-white text-violet-dark active:bg-violet active:text-white"
+                : "bg-white/10 text-violet-dark/10 hover:bg-white hover:text-violet-dark"
+            }
+            transition-all duration-300`}
+        >
+          {isPaused ? (
             <svg fill="currentColor" className="w-6 h-6" viewBox="0 0 24 24">
               <path
                 fillRule="evenodd"
@@ -49,17 +59,7 @@ const SafetySection = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </button>
-        ) : (
-          // play button
-          <button
-            onClick={togglePlayPause}
-            className="w-20 h-20 rounded-full
-            absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-            bg-white/10 flex items-center justify-center text-violet-dark/10
-            active:bg-violet active:text-white duration-500 transition-all z-[2]
-            hover:bg-white hover:text-violet-dark"
-          >
+          ) : (
             <svg fill="currentColor" className="w-6 h-6" viewBox="0 0 24 24">
               <path
                 fillRule="evenodd"
@@ -67,16 +67,16 @@ const SafetySection = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </button>
-        )}
+          )}
+        </button>
 
-        {/* video */}
+        {/* Video element */}
         <video
           ref={videoRef}
           preload="none"
           poster={OperatingRoomImg}
           loop
-          className="min-w-60 w-[840px] h-auto object-cover rounded-[2.5rem] tablet:rounded-none"
+          className="rounded-[2.5rem] tablet:rounded-none w-[840px] min-w-60 h-auto object-cover"
         >
           <source src={OperatingRoomVideo} type="video/mp4" />
         </video>

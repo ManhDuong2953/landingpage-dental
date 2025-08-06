@@ -1,5 +1,5 @@
 import HeroSection from "./HeroSection";
-import DentalistIsReImagining from "./DentalistIsReImagining";
+import dentalistIsReImagining from "./dentalistIsReImagining";
 import ServicesSection from "./ServicesSection";
 import DentalEmergency from "./DentalEmergency";
 import FeaturesSection from "./FeaturesSection";
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <DentalistIsReImagining />
+      <dentalistIsReImagining />
       <ServicesSection />
       <DentalEmergency />
       <FeaturesSection />

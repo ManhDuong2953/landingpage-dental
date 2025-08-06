@@ -49,7 +49,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         addStyles="mt-4 text-sm laptop:text-base px-6 py-4 rounded-xl 
         after:rounded-xl"
       >
-        Book an appointment
+        Đặt lịch hẹn ngay
       </VioletButton>
     </menu>
   );

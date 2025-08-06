@@ -9,95 +9,87 @@ import ArticleCard from "../../components/ArticleCard";
 const articleList = [
   {
     cover: ArticleCoverImg1,
-    category: "Technology",
-    title: "New Technology Make for Dental Operation",
+    category: "Công nghệ",
+    title: "Công nghệ mới trong phẫu thuật nha khoa",
   },
   {
     cover: ArticleCoverImg2,
-    category: "Dental",
-    title: "Regular Dental care make Your Smile Brighter",
+    category: "Nha khoa",
+    title: "Chăm sóc răng miệng thường xuyên giúp nụ cười rạng rỡ",
   },
   {
     cover: ArticleCoverImg3,
-    category: "Hygiene",
-    title: "Dental Hygiene for All Age to Make Smile",
+    category: "Vệ sinh",
+    title: "Vệ sinh răng miệng cho mọi lứa tuổi để giữ nụ cười",
   },
-
   {
     cover: ArticleCoverImg4,
-    category: "Tips & trick",
-    title: "New Technology Make for Dental Operation 2",
+    category: "Mẹo hay",
+    title: "Công nghệ mới trong phẫu thuật nha khoa 2",
   },
   {
     cover: ArticleCoverImg5,
-    category: "News",
-    title: "Regular Dental care make Your Smile Brighter 2",
+    category: "Tin tức",
+    title: "Chăm sóc răng miệng thường xuyên giúp nụ cười rạng rỡ 2",
   },
   {
     cover: ArticleCoverImg6,
-    category: "Events",
-    title: "Dental Hygiene for All Age to Make Smile 2",
+    category: "Sự kiện",
+    title: "Vệ sinh răng miệng cho mọi lứa tuổi để giữ nụ cười 2",
   },
 ];
-
 const ArticleListSection = () => {
   return (
-    <section className="max-w-[1300px] mx-auto flex flex-col items-center gap-y-16">
-      {/* title */}
-      <h2 className="text-center">Stay updated with our latest news</h2>
+    <section className="flex flex-col items-center gap-y-16 mx-auto max-w-[1300px]">
+      {/* Title */}
+      <h2 className="text-center">
+        Cập nhật những tin tức mới nhất từ chúng tôi
+      </h2>
 
-      {/* article list */}
-      <div
-        className="flex flex-col items-center justify-center gap-10
-        tablet:flex-row flex-wrap"
-      >
-        {/* article cards */}
-        {articleList.map(({ cover, category, title }) => (
+      {/* Article list */}
+      <div className="flex tablet:flex-row flex-col flex-wrap justify-center items-center gap-10">
+        {articleList.map(({ cover, category, title }, index) => (
           <ArticleCard
-            key={title}
+            key={`${title}-${index}`}
             cover={cover}
             title={title}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            data-aos-duration="700"
             category={category}
             abstract="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing..."
           />
         ))}
       </div>
 
-      {/* pagination buttons */}
-      <div className="flex items-center justify-center gap-x-4 gap-y-6 flex-wrap">
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-white rounded-2xl bg-violet">
-          1
-        </button>
+      {/* Pagination */}
+      <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-6">
+        {[1, 2, 3, 4, 5].map((page) => (
+          <button
+            key={page}
+            className={`text-lg w-12 aspect-square tablet:w-14 font-bold rounded-2xl duration-300 ${
+              page === 1
+                ? "text-white bg-violet"
+                : "text-violet-dark border border-[#eee] hover:text-white hover:bg-violet hover:border-violet"
+            }`}
+          >
+            {page}
+          </button>
+        ))}
 
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300">
-          2
-        </button>
-
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300">
-          3
-        </button>
-
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300">
-          4
-        </button>
-
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300">
-          5
-        </button>
-
-        <button className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300">
+        <button className="hover:bg-violet border border-[#eee] hover:border-violet rounded-2xl w-12 tablet:w-14 aspect-square font-bold text-violet-dark hover:text-white text-lg duration-300">
           ...
         </button>
 
         <button
-          className="text-lg w-12 aspect-square tablet:w-14 font-bold text-violet-dark rounded-2xl border border-[#eee] hover:text-white hover:bg-violet hover: hover:border-violet duration-300
-          flex items-center justify-center"
+          className="flex justify-center items-center hover:bg-violet border border-[#eee] hover:border-violet rounded-2xl w-12 tablet:w-14 aspect-square font-bold text-violet-dark hover:text-white text-lg duration-300"
+          aria-label="Next Page"
         >
-          <svg className="w-2 h-[14px] fill-none">
+          <svg className="fill-none w-2 h-[14px]">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="stroke-current stroke-2"
+              className="stroke-2 stroke-current"
               d="m1 1 6 6-6 6"
             />
           </svg>

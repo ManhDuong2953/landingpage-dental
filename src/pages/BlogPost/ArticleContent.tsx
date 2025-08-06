@@ -5,157 +5,108 @@ import ArticleImg2 from "../../assets/images/BlogPost/article-img-2.png";
 
 const ArticleContent = () => {
   return (
-    <section className="section-1200 flex-col">
-      {/* title, author and abstract */}
-      <div className="tablet:pl-20 mb-16">
-        {/* title */}
-        <span className="section-small-title">Technology</span>
-        <h2 className="max-w-[710px] mt-4 mb-8 leading-[1.3]">
-          New Technology Make for Better Dental Operation
+    <section className="flex-col section-1200">
+      {/* tiêu đề, tác giả và trích đoạn */}
+      <div className="mb-16 tablet:pl-20" data-aos="fade-up">
+        <span className="section-small-title">Công nghệ</span>
+        <h2 className="mt-4 mb-8 max-w-[710px] leading-[1.3]">
+          Công nghệ tiên tiến giúp nâng cao hiệu quả trong phẫu thuật nha khoa
         </h2>
 
-        {/* author */}
+        {/* tác giả */}
         <div className="flex gap-x-3">
           <img
             src={AuthorAvatarImg}
             alt="Robert Fox"
-            className="w-12 h-12 rounded-[100%] object-cover"
+            className="rounded-full w-12 h-12 object-cover"
           />
           <p className="flex flex-col gap-y-2">
-            <span className="text-base font-black text-violet-dark">
-              Robert Fox
-            </span>
-            <span className="text-xs font-semibold text-violet-dark/70">
-              12 August 2021
-            </span>
+            <span className="font-black text-violet-dark text-base">Robert Fox</span>
+            <span className="font-semibold text-violet-dark/70 text-xs">12 Tháng 8, 2021</span>
           </p>
         </div>
 
-        {/* abstract */}
-        <p className="max-w-[990px] text-base font-medium mt-8">
-          The paper discusses the use of epoxy resins in construction and repair
-          of offshore concrete structures. Typical properties of resin systems
-          are described, and the range of conditions encountered in practice and
-          the development of a wide range of epoxy.
+        {/* trích đoạn */}
+        <p className="mt-8 max-w-[990px] font-medium text-base">
+          Việc ứng dụng công nghệ kỹ thuật số và vật liệu tiên tiến trong nha khoa đang mang lại hiệu quả điều trị cao hơn, giảm đau và rút ngắn thời gian hồi phục cho bệnh nhân.
         </p>
       </div>
 
-      {/* article cover image */}
+      {/* ảnh tiêu đề bài viết */}
       <img
         src={ArticleCoverImg}
-        alt="New Technology Make for Better Dental Operation"
-        className="w-full h-[320px] mobileXL:h-[480px] tabletL:h-[520px] laptop:h-[600px] object-cover rounded-3xl"
+        alt="Công nghệ mới giúp cải thiện quy trình phẫu thuật nha khoa"
+        className="rounded-3xl w-full h-[320px] laptop:h-[600px] mobileXL:h-[480px] tabletL:h-[520px] object-cover"
+        data-aos="fade-up"
+        data-aos-delay="100"
       />
 
-      {/* 2 firsts content paragraphs */}
-      <div className="tablet:pl-20 mt-16 flex flex-col gap-y-6">
-        <p className="text-base max-w-[990px]">
-          The paper discusses the use of epoxy resins in construction and repair
-          of offshore concrete structures. Typical properties of resin systems
-          are described, and the range of conditions encountered in practice and
-          the development of a wide range of epoxy systems for a variety of
-          applications are discussed. Several applications such as surface and
-          underwater repairs, and the use of epoxy resins as curing membranes,
-          and to seal cracks and joints are described in detail. It is shown
-          that careful selection of materials and good quality of workmanship
-          are essential to derive the maximum benefit from the use of epoxy
-          systems. A wide range of properties could be obtained from epoxies to
-          suit the requirements of the designer and the contractor.
+      {/* đoạn nội dung đầu tiên */}
+      <div className="flex flex-col gap-y-6 mt-16 tablet:pl-20" data-aos="fade-up" data-aos-delay="200">
+        <p className="max-w-[990px] text-base">
+          Trong những năm gần đây, các thiết bị như máy quét kỹ thuật số, in 3D, và trí tuệ nhân tạo đã được ứng dụng rộng rãi trong nha khoa. Chúng giúp nha sĩ lên kế hoạch điều trị chính xác hơn, đồng thời nâng cao trải nghiệm của bệnh nhân.
         </p>
 
-        <p className="text-base max-w-[960px]">
-          To this day, it’s not entirely clear which seven lines the article
-          referenced. The prevailing theory is that it’s the roughly seven lines
-          of curl it took to create a Charge. However, a search for the seven
-          lines of code ultimately misses the point: the ability to open up a
-          terminal, run this curl snippet, then immediately see a successful
-          credit card payment felt like seven lines of code. It’s unlikely that
-          a developer believed a production-ready payments integration involved
-          literally only seven lines of code. But taking something as complex as
-          credit card processing and reducing.
+        <p className="max-w-[960px] text-base">
+          Nhờ các công nghệ tiên tiến, nhiều ca điều trị như cấy ghép implant, chỉnh nha hay phục hình răng giờ đây diễn ra nhanh hơn, ít xâm lấn hơn và mang lại kết quả lâu dài.
         </p>
       </div>
 
-      {/* title and 2 others paragraphs */}
-      <div className="tablet:pl-20 mt-16 flex flex-col">
-        <h3 className="text-4xl">
-          How technology affecting the dental surgery?
-        </h3>
-        <p className="text-base max-w-[990px] mt-6 mb-6">
-          A few years ago, Bloomberg Businessweek published a feature story on
-          Stripe. Four words spanned the center of the cover: “seven lines of
-          code,” suggesting that’s all it took for a business to power payments
-          on Stripe. The assertion was bold—and became a theme and meme for us.
+      {/* tiêu đề phụ và nội dung */}
+      <div className="flex flex-col mt-16 tablet:pl-20" data-aos="fade-up" data-aos-delay="300">
+        <h3 className="text-4xl">Tác động của công nghệ đối với phẫu thuật nha khoa</h3>
+        <p className="mt-6 mb-6 max-w-[990px] text-base">
+          Việc sử dụng phần mềm mô phỏng 3D giúp bác sĩ phẫu thuật lập kế hoạch mổ chính xác đến từng milimet. Điều này giảm thiểu rủi ro và giúp phục hồi nhanh hơn.
         </p>
-        <p className="text-base max-w-[990px]">
-          To this day, it’s not entirely clear which seven lines the article
-          referenced. The prevailing theory is that it’s the roughly seven lines
-          of curl it took to create a Charge. However, a search for the seven
-          lines of code ultimately misses the point: the ability to open up a
-          terminal, run this curl snippet, then immediately see a successful
-          credit card payment felt like seven lines of code. It’s unlikely that
-          a developer believed a production-ready payments integration involved
-          literally only seven lines of code. But taking something as complex as
-          credit card processing and reducing the integration to only a few
-          lines of code that, when run, immediately returns a successful Charge
-          object is really quite magical.
+        <p className="max-w-[990px] text-base">
+          Ngoài ra, các vật liệu sinh học mới như mô nhân tạo và khung titanium cũng đang được ứng dụng để tăng độ ổn định cho các ca phẫu thuật phức tạp.
         </p>
       </div>
 
-      {/* 2 images */}
+      {/* hình ảnh minh họa */}
       <div
-        className="tablet:pl-20 mt-12 flex flex-col items-center gap-y-10
-        mobileXL:flex-row gap-x-10"
+        className="flex mobileXL:flex-row flex-col items-center gap-x-10 gap-y-10 mt-12 tablet:pl-20"
+        data-aos="fade-up"
+        data-aos-delay="400"
       >
         <div className="w-full mobileXL:max-w-[510px]">
           <img
             src={ArticleImg1}
-            alt=""
-            className="min-w-[280px] w-full h-[220px] mobileXL:h-[260px] tabletL:h-[300px] rounded-2xl object-cover"
+            alt="Công nghệ trong phẫu thuật"
+            className="rounded-2xl w-full min-w-[280px] h-[220px] mobileXL:h-[260px] tabletL:h-[300px] object-cover"
           />
         </div>
-
-        <div className="w-full mobileXL:max-w-[400px] -order-1 mobileXL:order-1">
+        <div className="-order-1 mobileXL:order-1 w-full mobileXL:max-w-[400px]">
           <img
             src={ArticleImg2}
-            alt=""
-            className="min-w-[190px] w-full h-[220px] mobileXL:h-[260px] tabletL:h-[300px] rounded-2xl object-cover"
+            alt="Thiết bị hiện đại"
+            className="rounded-2xl w-full min-w-[190px] h-[220px] mobileXL:h-[260px] tabletL:h-[300px] object-cover"
           />
         </div>
       </div>
 
-      {/* citation paragraph */}
+      {/* trích dẫn nổi bật */}
       <p
-        className="mt-16 tablet:ml-20 p-6 mobileL:px-10 mobileL:py-12 max-w-[880px] mx-auto bg-gradient-to-r 
-        from-[#dbeffa] border-l-[3px] border-l-violet text-violet-dark font-bold"
+        className="bg-gradient-to-r from-[#dbeffa] mx-auto mt-16 tablet:ml-20 p-6 mobileL:px-10 mobileL:py-12 border-l-[3px] border-l-violet max-w-[880px] font-bold text-violet-dark"
+        data-aos="fade-up"
+        data-aos-delay="500"
       >
-        “ Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-        lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida
-        nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-        auctor ”
+        “Ứng dụng công nghệ không chỉ nâng cao hiệu quả điều trị mà còn mở ra hướng đi mới cho ngành nha khoa hiện đại.”
       </p>
 
-      {/* remaining paragraphs */}
-      <div className="tablet:pl-20 mt-16 flex flex-col gap-y-8">
-        <p className="text-base max-w-[990px]">
-          A few years ago, Bloomberg Businessweek published a feature story on
-          Stripe. Four words spanned the center of the cover: “seven lines of
-          code,” suggesting that’s all it took for a business to power payments
-          on Stripe. The assertion was bold—and became a theme and meme for us.
+      {/* đoạn nội dung kết */}
+      <div className="flex flex-col gap-y-8 mt-16 tablet:pl-20" data-aos="fade-up" data-aos-delay="600">
+        <p className="max-w-[990px] text-base">
+          Sự kết hợp giữa chuyên môn của bác sĩ và sức mạnh của công nghệ đang tạo ra sự thay đổi rõ rệt trong điều trị nha khoa – từ chẩn đoán đến phục hồi.
         </p>
 
-        <p className="text-lg font-bold">
-          <span className="text-violet-dark">Related resource :</span>{" "}
-          <span className="text-violet">
-            What is canal root and what causing it?
-          </span>
+        <p className="font-bold text-lg">
+          <span className="text-violet-dark">Tài liệu liên quan:</span>{" "}
+          <span className="text-violet">Tủy răng là gì và nguyên nhân gây viêm tủy?</span>
         </p>
 
-        <p className="text-base max-w-[990px]">
-          A few years ago, Bloomberg Businessweek published a feature story on
-          Stripe. Four words spanned the center of the cover: “seven lines of
-          code,” suggesting that’s all it took for a business to power payments
-          on Stripe. The assertion was bold—and became a theme and meme for us.
+        <p className="max-w-[990px] text-base">
+          Nếu được ứng dụng đúng cách, công nghệ sẽ là công cụ đắc lực giúp bệnh nhân trải nghiệm dịch vụ nha khoa an toàn, nhanh chóng và chính xác hơn bao giờ hết.
         </p>
       </div>
     </section>

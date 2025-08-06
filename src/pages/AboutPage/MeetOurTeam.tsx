@@ -13,29 +13,33 @@ const teamMembers = [
 
 const MeetOurTeam = () => {
   return (
-    <section className="section-1200 flex-col gap-y-16">
-      {/* title, paragraph */}
+    <section className="flex-col gap-y-16 section-1200">
+      {/* title & paragraph */}
       <SectionHeaderAndParagraph
-        category="Meet our team"
+        category="Đội ngũ của chúng tôi"
         titleStyles="max-w-[540px]"
-        title="Get to know the dentalist dental Team"
-        paragraph="Lorem ipsum is placeholder text commonly used in the graphic, print,
-        and publishing industries for previewing layouts and visual mockups."
+        title="Gặp gỡ đội ngũ nha sĩ tận tâm của NekCare"
+        paragraph="Chúng tôi là những chuyên gia tận tụy, không chỉ mang đến nụ cười khỏe mạnh mà còn đảm bảo trải nghiệm thân thiện, nhẹ nhàng và chuyên nghiệp cho mọi bệnh nhân."
       />
 
-      {/* team members */}
+      {/* team members grid */}
       <div
-        className="grid grid-cols-1 content-center 
-        mobileXL:grid-cols-2 laptop:grid-cols-4 gap-10"
+        className="content-center gap-10 grid grid-cols-1 laptop:grid-cols-4 mobileXL:grid-cols-2"
       >
-        {teamMembers.map(({ photo, name }) => (
-          <div key={name} className="flex flex-col items-center gap-y-6">
+        {teamMembers.map(({ photo, name, bgColor }, index) => (
+          <div
+            key={name}
+            className="flex flex-col items-center gap-y-6 px-4 py-6 rounded-[2rem]"
+            style={{ backgroundColor: bgColor }}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
             <img
               src={photo}
-              alt={name}
-              className="w-[290px] h-[350px] object-cover rounded-[2rem] shadow-sm"
+              alt={`Ảnh chân dung ${name}`}
+              className="shadow-md rounded-[2rem] w-[290px] h-[350px] object-cover"
             />
-            <span className="text-lg font-bold -tracking-[0.4px] text-violet-dark">
+            <span className="font-bold text-violet-dark text-lg -tracking-[0.4px]">
               {name}
             </span>
           </div>

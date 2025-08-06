@@ -7,49 +7,62 @@ import RootCanalIcon from "../../assets/images/HomePage/root-canal.svg";
 const services = [
   {
     img: DenturesIcon,
-    service: "Dentures",
+    service: "Hàm giả tháo lắp",
     color: "bg-sky-light",
+    description:
+      "Giải pháp phục hình linh hoạt giúp bạn ăn nhai dễ dàng và cải thiện thẩm mỹ nụ cười.",
   },
   {
     img: ImplantsIcon,
-    service: "Implants",
+    service: "Cấy ghép Implant",
     color: "bg-violet-light",
+    description:
+      "Khôi phục răng đã mất bằng trụ titan bền chắc, mang lại cảm giác như răng thật.",
   },
   {
     img: WhiteningIcon,
-    service: "Whitening",
+    service: "Tẩy trắng răng",
     color: "bg-fuchsia-light",
+    description:
+      "Làm trắng răng an toàn, nhanh chóng, giúp bạn tự tin với nụ cười rạng rỡ.",
   },
   {
     img: RootCanalIcon,
-    service: "Root Canal",
+    service: "Điều trị tủy",
     color: "bg-orange-light",
+    description:
+      "Loại bỏ viêm nhiễm tủy, bảo tồn răng thật và chấm dứt cơn đau kéo dài.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="section-1200 flex-col">
+    <section
+      className="flex-col section-1200"
+      data-aos="fade-in"
+      data-aos-duration="500"
+    >
       {/* title, paragraph */}
-      <SectionHeaderAndParagraph
-        category="Services"
-        title="Feel amazing about your oral health"
-        titleStyles="max-w-[425px]"
-        paragraph="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
-      />
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+        <SectionHeaderAndParagraph
+          category="Dịch vụ"
+          title="Hãy tự tin với sức khỏe răng miệng của bạn"
+          titleStyles="max-w-[425px]"
+          paragraph="Chúng tôi mang đến các dịch vụ nha khoa toàn diện giúp bạn luôn cảm thấy thoải mái, an toàn và hài lòng trong suốt quá trình điều trị – từ kiểm tra định kỳ đến các phương pháp phục hình hiện đại."
+        />
+      </div>
 
       {/* list of services */}
       <div
-        className="mt-16 mb-14 grid grid-cols-1
-        mobileXL:grid-cols-2 laptop:grid-cols-4 gap-10
-        justify-items-center laptop:justify-items-stretch"
+        className="justify-items-center laptop:justify-items-stretch gap-10 grid grid-cols-1 laptop:grid-cols-4 mobileXL:grid-cols-2 mt-16 mb-14"
       >
-        {services.map(({ img, service, color }) => (
+        {services.map(({ img, service, color, description }, index) => (
           <div
             key={service}
-            className="max-w-[480px] rounded-[32px] border border-[#eee]
-            flex flex-col gap-y-6 p-3 pb-6 mobileM:p-4 mobileM:pb-8
-            cursor-pointer hover:shadow-[] duration-300"
+            className="flex flex-col gap-y-6 hover:shadow-md p-3 mobileM:p-4 pb-6 mobileM:pb-8 border border-[#eee] rounded-[32px] max-w-[480px] duration-300 cursor-pointer"
+            data-aos="zoom-in"
+            data-aos-delay={index * 150 + 200}
+            data-aos-duration="800"
           >
             <div
               className={`${color} rounded-[32px] px-20 py-12 flex items-center justify-center`}
@@ -61,10 +74,10 @@ const ServicesSection = () => {
               />
             </div>
 
-            <div className="flex flex-col items-center text-center gap-y-2">
+            <div className="flex flex-col items-center gap-y-2 text-center">
               <h3>{service}</h3>
               <p className="text-violet-dark/60 text-base">
-                Lorem ipsum is placeholder text commonly used in the...
+                {description}
               </p>
             </div>
           </div>
@@ -72,12 +85,13 @@ const ServicesSection = () => {
       </div>
 
       <button
-        className="bg-violet-light text-violet font-bold py-5 px-8
-        rounded-2xl self-center flex items-center gap-x-4 group
-        hover:bg-violet hover:text-white duration-300 ease-in"
+        className="group flex items-center self-center gap-x-4 bg-violet-light hover:bg-violet px-8 py-5 rounded-2xl font-bold text-violet hover:text-white duration-300 ease-in"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
       >
-        View all service list
-        <svg className="group w-6 h-6 fill-none">
+        Xem tất cả dịch vụ
+        <svg className="group fill-none w-6 h-6">
           <circle
             cx="12"
             cy="12"

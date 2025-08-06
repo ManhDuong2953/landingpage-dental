@@ -6,41 +6,44 @@ import ArticleCard from "../../components/ArticleCard";
 const articleList = [
   {
     cover: ArticleCoverImg1,
-    category: "Technology",
-    title: "New Technology Make for Dental Operation",
+    category: "Công nghệ",
+    title: "Công nghệ hiện đại trong phẫu thuật nha khoa",
   },
   {
     cover: ArticleCoverImg2,
-    category: "Dental",
-    title: "Regular Dental care make Your Smile Brighter",
+    category: "Nha khoa",
+    title: "Chăm sóc răng định kỳ giúp nụ cười tỏa sáng",
   },
   {
     cover: ArticleCoverImg3,
-    category: "Hygiene",
-    title: "Dental Hygiene for All Age to Make Smile",
+    category: "Vệ sinh",
+    title: "Vệ sinh răng miệng cho mọi lứa tuổi",
   },
 ];
 
 const ArticleListSection = () => {
   return (
-    <section
-      className="section-1200 flex-col items-center gap-y-16"
-    >
-      {/* title */}
-      <h2 className="text-center">Stay updated with our latest news</h2>
+    <section className="flex-col items-center gap-y-16 section-1200">
+      {/* tiêu đề chính */}
+      <h2 className="text-center" data-aos="fade-up">
+        Cập nhật những tin tức mới nhất từ chúng tôi
+      </h2>
 
-      {/* some articles */}
+      {/* danh sách bài viết */}
       <div
-        className="flex flex-col items-center justify-center gap-10
-        tablet:flex-row"
+        className="flex tablet:flex-row flex-col justify-center items-center gap-10"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
-        {articleList.map(({ cover, category, title }) => (
+        {articleList.map(({ cover, category, title }, index) => (
           <ArticleCard
             key={title}
             cover={cover}
             title={title}
             category={category}
-            abstract="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing..."
+            abstract="Khám phá những kiến thức hữu ích về sức khỏe răng miệng, công nghệ và chăm sóc cá nhân từ đội ngũ chuyên gia."
+            data-aos="fade-up"
+            data-aos-delay={200 + index * 100}
           />
         ))}
       </div>

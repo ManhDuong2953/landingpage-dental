@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 
-import DentalistLogo from "../../assets/svg/dentalist.svg";
+import dentalistLogo from "../../assets/svg/NekCare.png";
 import VioletButton from "../UI/VioletButton";
 import NavLinkItems from "./NavLinkItems";
 import MobileMenu from "./MobileMenu";
@@ -46,9 +46,9 @@ const Header = () => {
             className="hover:opacity-70 active:scale-[.98] duration-300"
           >
             <img
-              src={DentalistLogo}
-              alt="Dentalist"
-              className="min-w-[96px] h-auto"
+              src={dentalistLogo}
+              alt="NekCare"
+              className="w-auto h-[96px] object-contain"
             />
           </Link>
 
@@ -66,7 +66,7 @@ const Header = () => {
             addStyles="hidden laptopM:block text-sm laptop:text-base
             px-6 py-4 rounded-xl after:rounded-xl mr-5"
           >
-            Book an appointment
+            Đặt lịch hẹn ngay
           </VioletButton>
 
           {/* btn show mobile menu */}
