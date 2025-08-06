@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { RiFacebookFill, RiTwitterFill, RiInstagramLine } from "react-icons/ri";
-import dentalistBlackLogo from "../../assets/svg/dentalist-black.svg";
+import dentalistBlackLogo from "../../assets/svg/NekCare.png";
 import PhoneIcon from "../../assets/svg/contact-phone.svg";
 import ClockIcon from "../../assets/svg/clock.svg";
 import LocationIcon from "../../assets/svg/location.svg";
@@ -23,7 +23,7 @@ const Footer = () => {
               <img
                 src={dentalistBlackLogo}
                 alt="NekCare"
-                className="w-[152px] min-w-[120px] h-auto"
+                className="w-auto h-[120px]"
               />
             </Link>
 
